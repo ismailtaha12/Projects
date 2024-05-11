@@ -207,13 +207,13 @@ void MainWindowtest::on_pushButton_clicked()
     myHashTable.readFromFile("C:/Users/MM/Downloads/Weight Loss and Fitness.txt");
     myHashTable.checkAndCategorizeMail("C:/Users/MM/Downloads/c++ miu/emails/Receved/amazingoffers@dealsforyou.net.txt");
     myHashTable.checkAndCategorizeMail("C:/Users/MM/Downloads/c++ miu/emails/Receved/freegifts@amazonhelp.art.txt");
-    myHashTable.checkAndCategorizeMail("C:/Users/MM/Downloads/c++ miu/emails/Receved/youssefashrafdem@gmail.com.txt");
+
     myHashTable.checkAndCategorizeMail("C:/Users/MM/Downloads/c++ miu/emails/Receved/lotterywinner@claimprize.biz.txt");
     myHashTable.checkAndCategorizeMail("C:/Users/MM/Downloads/c++ miu/emails/Receved/noreply@gmail.com.txt");
     myHashTable.checkAndCategorizeMail("C:/Users/MM/Downloads/c++ miu/emails/Receved/promotions9@websitepromoticons.com.txt");
     myHashTable.checkAndCategorizeMail("C:/Users/MM/Downloads/c++ miu/emails/Receved/rmohamed1403@gmail.com.txt");
     myHashTable.checkAndCategorizeMail("C:/Users/MM/Downloads/c++ miu/emails/Receved/spamm@spamm.spam.txt");
-    myHashTable.checkAndCategorizeMail("C:/Users/MM/Downloads/c++ miu/emails/Receved/info@uber.com.txt");
+
     myHashTable.checkAndCategorizeMail("C:/Users/MM/Downloads/c++ miu/emails/Receved/security@facebook.com.txt");
     myHashTable.checkAndCategorizeMail("C:/Users/MM/Downloads/c++ miu/emails/Receved/support@cib.com.txt");
     myHashTable.checkAndCategorizeMail("C:/Users/MM/Downloads/c++ miu/emails/Receved/support@microsoftservices.com.txt");

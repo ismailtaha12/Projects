@@ -264,79 +264,117 @@ void HTable::categoryofemail(string file_path) {
     }
 
 }
+bool fileExistsAndNotEmpty(const std::string& filename) {
+    std::ifstream file(filename);
+    return file.good() && !file.eof(); // Check if the file is open and not empty
+}
 void HTable::checkAndCategorizeMail(string file_path) {
     // Extract the sender's address from the file name
     cout<<"im here";
     size_t lastSlash = file_path.find_last_of("/\\");
     size_t lastDot = file_path.find_last_of(".");
     string senderAddress = file_path.substr(lastSlash + 1, lastDot - lastSlash - 1);
-    //string toedite = file_path.substr(0, lastSlash+1);
-    string inbox = "C:/Users/MM/Downloads/c++ miu/emails/inbox/";
-    string spamed = "C:/Users/MM/Downloads/c++ miu/emails/spam/";
-    double wordcount = 0;
-    double spamcount = 0;
-    //size_t lastSlash_mov = file_path.find_last_of("\//");
-    if (!checkmail(senderAddress)) {
-        cout << "Mail from " << senderAddress << " is spam" << endl;
-        ofstream outputFiles(spamed+"reason of spam "+senderAddress+".txt");
-        string destinationPath = spamed + file_path.substr(lastSlash+1);
-        outputFiles<<"The Email Address is Spamed";
-        moveFile(file_path, destinationPath);
-    }
-    else {
-        ofstream outputFile(spamed+"reason of spam "+senderAddress+".txt");
-        cout << "Mail Adress " << senderAddress << " is safe" << endl;
-        ifstream mailfile(file_path);
-        string word;
-        while (mailfile >> word)
-        {
-            string lowerd = toLowerCase(word);
-            string pot = porterStemmer(lowerd);
-            if (searchLinear(pot) != -1)
+    if (fileExistsAndNotEmpty(file_path)) {
+
+        string inbox = "C:/Users/MM/Downloads/c++ miu/emails/inbox/";
+        string spamed = "C:/Users/MM/Downloads/c++ miu/emails/spam/";
+        double wordcount = 0;
+        double spamcount = 0;
+        //size_t lastSlash_mov = file_path.find_last_of("\//");
+        if (!checkmail(senderAddress)) {
+            cout << "Mail from " << senderAddress << " is spam" << endl;
+            ofstream outputFiles(spamed+"reason of spam "+senderAddress+".txt");
+            string destinationPath = spamed + file_path.substr(lastSlash+1);
+            outputFiles<<"The Email Address is Spamed";
+            ofstream outputFile(spamed+"reason of spam "+senderAddress+".txt");
+            cout << "Mail Adress " << senderAddress << " is safe" << endl;
+            ifstream mailfile(file_path);
+            string word;
+            while (mailfile >> word)
             {
-                outputFile << "The word is ";
-                outputFile<<getwordstring(pot);
-                outputFile << "  ";
-                outputFile << "The spam category is ";
-                outputFile<<getcategoryinstring(pot);
-                outputFile << endl;
-                // Get the reason of spam and the file name
-                wordcount++;
-                spamcount++;
+                string lowerd = toLowerCase(word);
+                string pot = porterStemmer(lowerd);
+                if (searchLinear(pot) != -1)
+                {
+                    outputFile << "The word is ";
+                    outputFile<<getwordstring(pot);
+                    outputFile << "  ";
+                    outputFile << "The spam category is ";
+                    outputFile<<getcategoryinstring(pot);
+                    outputFile << endl;
+                    // Get the reason of spam and the file name
+                    wordcount++;
+                    spamcount++;
+                }
             }
-        }
-        mailfile.close();
-        outputFile.close();
-        if (spamcount / wordcount <= 0.25)
-        {
-            cout << "no spam"<<endl;
-            //categoryofemail(file_path);
-            string destinationPathf = inbox + file_path.substr(lastSlash + 1);
-            moveFile(file_path, destinationPathf);
-            return;
-        }
-        else if ((spamcount / wordcount > 0.25) && (spamcount / wordcount < 0.3))
-        {
-            cout << "spam level 1"<<endl;
-        }
-        else if ((spamcount / wordcount > 0.3 )&& (spamcount / wordcount < 0.5))
-        {
-            cout << "spam level 2"<<endl;
-        }
-        else if (spamcount / wordcount > 0.5) {
-            cout << "totally spam"<<endl;
-        }
-        if (!checkmailspam(file_path)){
-            categoryofemail(file_path);
-            string destinationPath = inbox + file_path.substr(lastSlash + 1);
+            mailfile.close();
+            outputFile.close();
             moveFile(file_path, destinationPath);
         }
         else {
-            categoryofemail(file_path);
-            string destinationPath = spamed + file_path.substr(lastSlash + 1);
-            moveFile(file_path, destinationPath);
+            ofstream outputFile(spamed+"reason of spam "+senderAddress+".txt");
+            cout << "Mail Adress " << senderAddress << " is safe" << endl;
+            ifstream mailfile(file_path);
+            string word;
+            while (mailfile >> word)
+            {
+                string lowerd = toLowerCase(word);
+                string pot = porterStemmer(lowerd);
+                if (searchLinear(pot) != -1)
+                {
+                    outputFile << "The word is ";
+                    outputFile<<getwordstring(pot);
+                    outputFile << "  ";
+                    outputFile << "The spam category is ";
+                    outputFile<<getcategoryinstring(pot);
+                    outputFile << endl;
+                    // Get the reason of spam and the file name
+                    wordcount++;
+                    spamcount++;
+                }
+            }
+            mailfile.close();
+
+            if (spamcount / wordcount <= 0.25)
+            {
+                outputFile << "no spam"<<endl;
+                //categoryofemail(file_path);
+                string destinationPathf = inbox + file_path.substr(lastSlash + 1);
+                moveFile(file_path, destinationPathf);
+                return;
+            }
+            else if ((spamcount / wordcount > 0.25) && (spamcount / wordcount < 0.3))
+            {
+                outputFile << "spam level 1"<<endl;
+            }
+            else if ((spamcount / wordcount > 0.3 )&& (spamcount / wordcount < 0.5))
+            {
+                outputFile << "spam level 2"<<endl;
+            }
+            else if (spamcount / wordcount > 0.5) {
+                outputFile << "totally spam"<<endl;
+            }
+            if (!checkmailspam(file_path)){
+                categoryofemail(file_path);
+                string destinationPath = inbox + file_path.substr(lastSlash + 1);
+                moveFile(file_path, destinationPath);
+            }
+            else {
+                categoryofemail(file_path);
+                string destinationPath = spamed + file_path.substr(lastSlash + 1);
+                moveFile(file_path, destinationPath);
+            }
+             outputFile.close();
         }
-      }
+
+
+    } else {
+        std::cout << "File " << senderAddress << " does not exist or is empty." << std::endl;
+    }
+
+    //string toedite = file_path.substr(0, lastSlash+1);
+
+
 }
 bool HTable::checkmailspam(string file_path) {
     int counter = 0;
