@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+form {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+    border-color: black;
+    border-width: 2px;
+    flex-wrap: wrap;
+    background-color: white;
+   
+    justify-content: center;
+    
+}
+*{
+    font-family: "Oswald", sans-serif;
+}
+.container{
+    margin-top:50px;
+    box-shadow: 0, 10, 10, black;
+}
+body{
+    background-color: rgba(80, 79, 78, 0.9);
+}
+
+label,
+input {
+    display: block;
+    width: 90%;     
+    margin-bottom: 3%;
+    background-color: transparent;
+}
+
+input[type="submit"] {
+    background-color: #5a5ed2;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    font-size: 12pt;
+}
+
+.left {
+    flex: 1;
+}
+
+.right {
+    flex: 1;
+}
+
+.submit-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.visa-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 300px;
+    height: 180px;
+    background-image: radial-gradient(circle 897px at 9% 80.3%,
+            rgba(55, 60, 245, 1) 0%,
+            rgba(234, 161, 15, 0.9) 100.2%);
+    border-radius: 10px;
+    padding: 20px;
+    font-family: "Oswald", sans-serif;
+    position: relative;
+    gap: 15px;
+}
+
+.logoContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 18px;
+}
+
+.svgLogo {
+    height: 40px;
+    width: auto;
+    margin-right: 10%;
+}
+
+.inputstyle::placeholder {
+    color: #ffffff;
+}
+
+.inputstyle {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    caret-color: red;
+    font-size: 13px;
+    height: 25px;
+    letter-spacing: 1.5px;
+    
+}
+
+.number-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+#cardNumber {
+    width: 100%;
+    height: 25px;
+}
+
+.name-date-cvv-container {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    gap: 10px;
+}
+
+.name-wrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.expiry-wrapper,
+.cvv-wrapper {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cvv-wrapper {
+    width: 10%;
+}
+
+#expiry,
+#cvv {
+    width: 100%;
+}
+
+.input-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #e2e2e2;
+    width: 100%;
+ 
+}

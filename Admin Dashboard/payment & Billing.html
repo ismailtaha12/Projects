@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Layout</title>
+    <link rel="stylesheet" type="text/css" href="payment.css">
+    <script src="validation.js"></script>
+</head>
+
+<body>
+    <div class="container"> 
+    <form>
+        <div class="left">
+            <label for="Billing Address" style="font-weight: bold; font-size: 20pt;">Billing Address</label>
+            <label for="Full Name">Full Name:</label>
+            <input type="text" id="full Name" name="Full Name" placeholder="Enter your full name"><br>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Enter Email"><br>
+
+            <label for="Address">Address:</label>
+            <input type="text" id="Address" name="Address" placeholder="Enter your address in details"><br>
+
+            <label for="Country">Country:</label>
+            <input type="text" id="Country" name="Country" placeholder="Enter your country"><br>
+
+            <div>
+                <div style="display: inline-block; width: 40%; margin-right: 35px;">
+                    <label for="City">City:</label>
+                    <input type="text" id="City" name="City" placeholder="Enter City">
+                </div>
+                <div style="display: inline-block; width: 40%;">
+                    <label for="Zip Code">Zip Code:</label>
+                    <input type="text" id="Zip Code" name="Zip Code" placeholder="Enter Zip Code">
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="right">
+            <label for="Payment" style="font-weight: bold; font-size: 20pt;">Payment</label>
+            <label for="visa-options">Cards Accepted:</label>
+            <img src="Visaaaa.png" width="250px">
+            <label for="card-details">Enter your card details:</label>
+            <div class="visa-card">
+                <div class="logoContainer">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="23" height="23" viewBox="0 0 48 48"
+                        class="svgLogo">
+                        <path fill="#ff9800" d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z"></path>
+                        <path fill="#d50000" d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z"></path>
+                        <path fill="#ff3d00"
+                            d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48 C20.376,15.05,18,19.245,18,24z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="number-container">
+                    <label class="input-label" for="cardNumber">CARD NUMBER</label>
+                    <input class="inputstyle" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX" name="cardNumber"
+                        type="text" />
+                </div>
+
+                <div class="name-date-cvv-container">
+                    <div class="name-wrapper">
+                        <label class="input-label" for="holderName">CARD HOLDER</label>
+                        <input class="inputstyle" id="holderName" placeholder="NAME" type="text" />
+                    </div>
+
+                    <div class="expiry-wrapper">
+                        <label class="input-label" for="expiry">VALID THRU</label>
+                        <input class="inputstyle" id="expiry" placeholder="MM/YY" type="text" />
+                    </div>
+                    <div class="cvv-wrapper">
+                        <label class="input-label" for="cvv">CVV</label>
+                        <input class="inputstyle" placeholder="***" maxlength="3" id="cvv" type="password" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="submit-container">
+            <input type="submit">
+        </div>
+
+    </form>
+</div>
+</body>
+
+</html>

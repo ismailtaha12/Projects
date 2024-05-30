@@ -1,0 +1,164 @@
+{
+  "exercises": [
+    {
+      "id": "5",
+      "title": "Lunge",
+      "muscleGroup": "Quadriceps, Hamstrings, Glutes",
+      "difficultyLevel": "Intermediate",
+      "description": "The lunge is a compound lower body exercise that targets the quadriceps, hamstrings, and glutes. Begin by standing tall with your feet hip-width apart. Step forward with one foot and lower your body until both knees are bent at 90-degree angles. Push through the heel of your front foot to return to the starting position, then repeat on the opposite side.",
+      "equipmentNeeded": "None"
+    },
+    {
+      "id": "6",
+      "title": "Burpee",
+      "muscleGroup": "Full Body",
+      "difficultyLevel": "Advanced",
+      "description": "The burpee is a high-intensity, full-body exercise that combines elements of strength training and cardiovascular conditioning. Begin in a standing position, then squat down and place your hands on the ground. Jump your feet back into a plank position, perform a push-up, then jump your feet forward and explosively jump into the air, reaching your arms overhead. Land softly and immediately lower back into the next repetition.",
+      "equipmentNeeded": "None"
+    },
+    {
+      "id": "7",
+      "title": "Deadlift",
+      "muscleGroup": "Hamstrings, Glutes, Lower Back",
+      "difficultyLevel": "Intermediate",
+      "description": "The deadlift is a compound exercise that targets the hamstrings, glutes, and lower back. Begin by standing with your feet hip-width apart, toes pointing forward, and a barbell on the floor in front of you. Hinge at the hips and bend your knees to grip the barbell with an overhand grip, hands shoulder-width apart. Keeping your back straight and core engaged, drive through your heels to lift the barbell until you are standing tall. Lower the barbell back to the ground with control.",
+      "equipmentNeeded": "Barbell"
+    },
+    {
+      "id": "8",
+      "title": "Bench Press",
+      "muscleGroup": "Chest, Shoulders, Triceps",
+      "difficultyLevel": "Intermediate",
+      "description": "The bench press is a compound exercise that primarily targets the chest, shoulders, and triceps. Begin by lying flat on a bench with your feet planted on the ground and a barbell racked above your chest. Grip the barbell with hands slightly wider than shoulder-width apart, elbows bent at 90 degrees. Lower the barbell to your chest, keeping your elbows close to your body, then push it back up to the starting position.",
+      "equipmentNeeded": "Barbell, Bench"
+    },
+    {
+      "id": "9",
+      "title": "Dumbbell Shoulder Press",
+      "muscleGroup": "Shoulders, Triceps",
+      "difficultyLevel": "Intermediate",
+      "description": "The dumbbell shoulder press is an upper body exercise that targets the shoulders and triceps. Begin by sitting on a bench with back support, holding a dumbbell in each hand at shoulder height with palms facing forward. Press the dumbbells overhead until your arms are fully extended, then lower them back down to shoulder height with control.",
+      "equipmentNeeded": "Dumbbells, Bench"
+    },
+    {
+      "id": "10",
+      "title": "Russian Twist",
+      "muscleGroup": "Core, Obliques",
+      "difficultyLevel": "Intermediate",
+      "description": "The Russian twist is a core exercise that targets the abdominals and obliques. Begin by sitting on the floor with knees bent and feet flat on the ground, holding a weight or medicine ball with both hands in front of your chest. Lean back slightly and lift your feet off the ground, balancing on your glutes. Rotate your torso to one side, bringing the weight towards the floor beside your hip, then rotate to the other side. Repeat in a controlled motion.",
+      "equipmentNeeded": "Weight or Medicine Ball"
+    },
+    {
+      "id": "11",
+      "title": "Hanging Leg Raise",
+      "muscleGroup": "Core, Hip Flexors",
+      "difficultyLevel": "Intermediate",
+      "description": "The hanging leg raise is a challenging core exercise that targets the abdominals and hip flexors. Begin by hanging from a pull-up bar with an overhand grip, arms fully extended. Engage your core and lift your legs until they are parallel to the ground, then lower them back down with control. Avoid swinging or using momentum to lift your legs.",
+      "equipmentNeeded": "Pull-Up Bar"
+    },
+    {
+      "id": "12",
+      "title": "Bicycle Crunch",
+      "muscleGroup": "Core, Obliques",
+      "difficultyLevel": "Intermediate",
+      "description": "The bicycle crunch is a dynamic core exercise that targets the abdominals and obliques. Begin by lying on your back with knees bent, feet lifted off the ground, and hands behind your head. Bring one knee towards your chest as you rotate your torso, bringing the opposite elbow towards the knee. Alternate sides in a pedaling motion, engaging your core throughout the movement.",
+      "equipmentNeeded": "None"
+    },
+    {
+      "id": "13",
+      "title": "Burpee",
+      "muscleGroup": "Full Body",
+      "difficultyLevel": "Advanced",
+      "description": "The burpee is a high-intensity, full-body exercise that combines elements of strength training and cardiovascular conditioning. Begin in a standing position, then squat down and place your hands on the ground. Jump your feet back into a plank position, perform a push-up, then jump your feet forward and explosively jump into the air, reaching your arms overhead. Land softly and immediately lower back into the next repetition.",
+      "equipmentNeeded": "None"
+    },
+    {
+      "id": "14",
+      "title": "Mountain Climber",
+      "muscleGroup": "Core, Shoulders, Legs",
+      "difficultyLevel": "Intermediate",
+      "description": "The mountain climber is a dynamic exercise that targets the core, shoulders, and legs. Begin in a plank position with hands directly beneath your shoulders and body forming a straight line from head to heels. Engage your core and bring one knee towards your chest, then quickly switch legs, alternating in a running motion. Keep your hips low and maintain a fast pace to elevate your heart rate.",
+      "equipmentNeeded": "None"
+    },
+    {
+      "id": "15",
+      "title": "Jumping Jacks",
+      "muscleGroup": "Full Body",
+      "difficultyLevel": "Beginner",
+      "description": "Jumping jacks are a classic cardiovascular exercise that engages the entire body. Begin by standing with feet together and arms at your sides. Jump your feet out to the sides while simultaneously raising your arms overhead. Return to the starting position by jumping your feet back together and lowering your arms to your sides. Continue in a rhythmic motion, keeping your core engaged and maintaining a steady pace.",
+      "equipmentNeeded": "None"
+    },
+    {
+      "id": "16",
+      "title": "Bulgarian Split Squat",
+      "muscleGroup": "Quadriceps, Glutes, Hamstrings",
+      "difficultyLevel": "Intermediate",
+      "description": "The Bulgarian split squat is a unilateral lower body exercise that targets the quadriceps, glutes, and hamstrings. Begin by standing a few feet in front of a bench or elevated surface, facing away from it. Place one foot on the bench behind you, laces down, and lower your body into a lunge position until your front thigh is parallel to the ground. Push through the heel of your front foot to return to the starting position.",
+      "equipmentNeeded": "Bench or Elevated Surface"
+    },
+    {
+      "id": "17",
+      "title": "Russian Twist",
+      "muscleGroup": "Core, Obliques",
+      "difficultyLevel": "Intermediate",
+      "description": "The Russian twist is a core exercise that targets the abdominals and obliques. Begin by sitting on the floor with knees bent and feet flat on the ground, holding a weight or medicine ball with both hands in front of your chest. Lean back slightly and lift your feet off the ground, balancing on your glutes. Rotate your torso to one side, bringing the weight towards the floor beside your hip, then rotate to the other side. Repeat in a controlled motion.",
+      "equipmentNeeded": "Weight or Medicine Ball"
+    },
+    {
+      "id": "18",
+      "title": "Box Jump",
+      "muscleGroup": "Legs, Glutes, Core",
+      "difficultyLevel": "Advanced",
+      "description": "The box jump is an explosive lower body exercise that targets the legs, glutes, and core. Begin by standing facing a sturdy box or platform at an appropriate height for your fitness level. Bend your knees and swing your arms back, then explosively jump onto the box, landing softly with knees bent. Step down or jump down with control and immediately repeat the movement.",
+      "equipmentNeeded": "Box or Platform"
+    },
+    {
+      "id": "19",
+      "title": "Deadlift",
+      "muscleGroup": "Hamstrings, Glutes, Lower Back",
+      "difficultyLevel": "Intermediate",
+      "description": "The deadlift is a compound exercise that targets the hamstrings, glutes, and lower back. Begin by standing with your feet hip-width apart, toes pointing forward, and a barbell in front of you on the ground. Bend at your hips and knees to lower your torso until you can grip the barbell with both hands just outside your knees. Keep your back straight and chest lifted as you stand up, driving through your heels and pulling the barbell up along your legs until you're standing upright.",
+      "equipmentNeeded": "Barbell, Weight Plates"
+    },
+    {
+      "id": "20",
+      "title": "Dumbbell Bench Press",
+      "muscleGroup": "Chest, Shoulders, Triceps",
+      "difficultyLevel": "Intermediate",
+      "description": "The dumbbell bench press is a compound exercise that targets the chest, shoulders, and triceps. Begin by lying on a flat bench with a dumbbell in each hand, palms facing away from you and elbows bent at a 90-degree angle. Press the dumbbells upward until your arms are fully extended, then lower them back down to chest level with control.",
+      "equipmentNeeded": "Dumbbells, Bench"
+    },
+    {
+      "id": "21",
+      "title": "Bicep Curl",
+      "muscleGroup": "Biceps",
+      "difficultyLevel": "Beginner",
+      "description": "The bicep curl is an isolation exercise that targets the biceps. Begin by standing with feet shoulder-width apart, holding a dumbbell in each hand with palms facing forward. Keeping your upper arms stationary, curl the dumbbells toward your shoulders by contracting your biceps. Lower the dumbbells back down to the starting position with control.",
+      "equipmentNeeded": "Dumbbells"
+    },
+    {
+      "id": "22",
+      "title": "Tricep Dip",
+      "muscleGroup": "Triceps",
+      "difficultyLevel": "Intermediate",
+      "description": "The tricep dip is a bodyweight exercise that targets the triceps. Begin by sitting on the edge of a stable chair or bench, hands gripping the edge of the seat beside your hips. Walk your feet forward until your knees are bent at a 90-degree angle and your hips are slightly off the seat. Lower your body by bending your elbows until your upper arms are parallel to the ground, then push back up to the starting position by straightening your arms.",
+      "equipmentNeeded": "Chair or Bench"
+    },
+    {
+      "id": "23",
+      "title": "Russian Twist",
+      "muscleGroup": "Core, Obliques",
+      "difficultyLevel": "Intermediate",
+      "description": "The Russian twist is a core exercise that targets the abdominals and obliques. Begin by sitting on the floor with knees bent and feet flat on the ground, holding a weight or medicine ball with both hands in front of your chest. Lean back slightly and lift your feet off the ground, balancing on your glutes. Rotate your torso to one side, bringing the weight towards the floor beside your hip, then rotate to the other side. Repeat in a controlled motion.",
+      "equipmentNeeded": "Weight or Medicine Ball"
+    },
+    {
+      "id": "24",
+      "title": "Hanging Leg Raise",
+      "muscleGroup": "Core, Hip Flexors",
+      "difficultyLevel": "Intermediate",
+      "description": "The hanging leg raise is a bodyweight exercise that targets the lower abs and hip flexors. Begin by hanging from a pull-up bar with an overhand grip, arms fully extended and feet off the ground. Keeping your legs straight, lift them upward until they're parallel to the ground, then lower them back down with control.",
+      "equipmentNeeded": "Pull-Up Bar"
+    }
+  ]
+}

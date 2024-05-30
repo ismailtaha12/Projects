@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>NutriFit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/6866201b21.js" crossorigin="anonymous"></script>
+   
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body >
+
+    <div class="Log-SignContainer   " id="Log-SignContainer">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registeration</span>
+                <input type="text" placeholder="Name" id="signupUsername">
+                <span id="signupErrorUsername" class="error-message hidden"></span>
+                <input type="email" placeholder="Email" id="signupEmail">
+                <span id="signupErrorEmail" class="error-message hidden"></span>
+                <input type="password" placeholder="Password" id="signupPassword">
+                <span id="signupErrorPassword" class="error-message hidden"></span>
+                <button onclick="signup()">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email password</span>
+                <input type="name" placeholder="name" id="loginUsername">
+                <input type="password" placeholder="Password" id="loginPassword">
+                <span id="loginError" class="error-message hidden">"Invalid username or password"</span>
+                <a href="#">Forget Your Password?</a>
+                <button onclick="login()">Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p style="color: aliceblue;">Enter your personal details to use all of site features</p>
+                    <button  id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p style="color: aliceblue;">Register with your personal details to use all of site features</p>
+                    <button  id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container hidden ">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <i class="fa-solid fa-fire-flame-curved fa-2xl"></i>
+                    <h2>Nutri<span class="dangerous">Fit<span></h2>
+                </div>
+                <div class="close"><span><i class="fa-solid fa-x fa-lg"></i></span></div>
+            </div>
+            <div class="sidebar">
+                <a href="#" class="active" onclick="setActive(this); showPage('Dashboard')">
+                    <span><i class="fa-solid fa-shop fa-lg"></i></span>
+                    <h1> Dashboard</h1>
+                </a>
+                <a href="#" onclick="setActive(this); showPage('editUsers')"> <span>
+                        <i class="fa-solid fa-user-pen fa-lg"></i></span>
+                    <h1> Edit Users</h1>
+                </a>
+                <a href="#" onclick="setActive(this); showPage('editProduct')"> <span>
+                    <i class="fa-solid fa-user-pen fa-lg"></i></span>
+                <h1> Edit Plan</h1>
+            </a>
+                <a href="#" onclick="openPopup('Sign-Out')">
+                    <i class="fa-solid fa-arrow-right-from-bracket fa-lg"></i>
+                    <h1> Sign out</h1>
+                </a>
+
+            </div>
+        </aside>
+
+        <main id="content " >
+           <div   id="Dashboard" class="page">
+            <h1>Dashboard</h1>
+            <div class="insights">
+                <div class="sales">
+                    <span><i class="fa-solid fa-chart-simple fa-xl"></i></span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Sales</h3>
+                            <h1>$25,024</h1>
+                        </div>
+                        <div class="progress"> <svg>
+                                <circle cx='38' cy='38' r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 hours</small>
+                </div>
+                <div class="Users">
+                    <span><i class="fa-solid fa-users fa-xl"></i></span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Users</h3>
+                            <h1>5000</h1>
+                        </div>
+                        <div class="progress"> <svg>
+                                <circle cx='38' cy='38' r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 hours</small>
+                </div>
+
+
+            </div>
+
+            <div id="editOrders">
+            <div class="Tablelist">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Number</th>
+                            <th>Plan</th>
+                            <th>Duration</th>
+                            <th>Payment</th>
+                            
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="RecentOrdertable" >
+                        
+                         
+                    </tbody>
+                </table>
+                <button id="addButtonOrder" class="editors" onclick="openPopup('addPopupOrder')">Add</button>
+                <button id="editButtonOrder" class="editors" onclick="openPopup('editPopupOrder')">Edit</button>
+                <button id="deleteButtonOrder" class="editors" onclick="openPopup('deletePopupOrder')">Delete</button>
+                        </div>
+                        <div id="addPopupOrder" class="popup-container">
+                            <div class="popup-content">
+                                <span class="close" onclick="closePopup('addPopupOrder')">&times;</span>
+                                <h2>Add Order</h2>
+                                
+                                <input type="text" id="newPlan"
+                                class="inputdata" placeholder="NewPlan"> <span id="newPlanError" class="error-message hidden">please enter basic or premium</span><br><br>
+                                <input type="text" id="newDuration"
+                                class="inputdata" placeholder="newDuration"><span id="newDurationError" class="error-message hidden">Please enter Duration from 1 to 3 months</span><br><br>
+                                
+                                
+                                <button onclick="addOrder()" class="editors">Add</button>
+                            </div>
+                            </div>
+                            <div id="editPopupOrder" class="popup-container">
+                                <div class="popup-content">
+                                    <span class="close" onclick="closePopup('editPopupOrder')">&times;</span>
+                                    <h2>Edit Order</h2>
+                                    <input type="text" id="Ordertoedit" 
+                                    class="inputdata" placeholder="ProductID"><span id="editIDError" class="error-message hidden">please enter id</span><br><br>
+                                <input type="text" id="newplanedit" 
+                                class="inputdata" placeholder="New plan"><span id="editPlanError" class="error-message hidden">please enter basic or premium</span><br><br>
+                                <input type="text" id="newDurationedit"
+                                class="inputdata" placeholder="editDuration"><span id="editDurationError" class="error-message hidden">Please enter Duration from 1 to 3 months</span><br><br>
+                                
+                                <button onclick="editOrder()" class="editors">Edit</button>
+                                </div>
+                            </div>
+                            <div id="deletePopupOrder" class="popup-container">
+                                <div class="popup-content">
+                                    <span class="close" onclick="closePopup('deletePopupOrder')">&times;</span>
+                                    <h2>Delete Data</h2>
+                                    <p>please enter id for deletion</p>
+                                    <input type="text" id="OrderIDDelete" 
+                                    class="inputdata" placeholder="ID">
+                                    <span id="DeleteIDError" class="error-message hidden">Please enter correct ID to delete</span><br><br>
+                                    <button onclick="deleteOrder()" class="editors">Delete</button>
+                                </div>
+                            </div>
+            </div>
+
+
+        </div>
+
+
+
+
+        <div id="editUsers" class="page hidden">
+        <div class="Tablelist">
+            <h2>Users</h2>
+            <table>
+                <thead>
+                    <tr><th>ID</th>
+                        <th>User name</th>
+                        <th>Password</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="USERTABLE" >
+                    
+                     
+                </tbody>
+                
+            </table>
+            <button id="addButton" class="editors" onclick="openPopup('addPopup')">Add</button>
+<button id="editButton" class="editors" onclick="openPopup('editPopup')">Edit</button>
+<button id="deleteButton" class="editors" onclick="openPopup('deletePopup')">Delete</button>
+        </div>
+        <div id="addPopup" class="popup-container">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('addPopup')">&times;</span>
+                <h2>Add Data</h2>
+                <input type="text" id="newUsername" 
+                class="inputdata" placeholder="Username">
+                <br><br>
+
+                <input type="password" id="newPassword"
+                class="inputdata" placeholder="Password"><span id="AddPasswordError" class="error-message hidden">Password is not safe. It must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.</span><br><br>
+
+                <input type="Email" id="newEmail"
+                class="inputdata" placeholder="Email"><span id="AddErrorEmail" class="error-message hidden">email already in use</span><br><br>
+
+                <input type="text" id="newRole"
+                class="inputdata" placeholder="Role"><span id="AddRoleError" class="error-message hidden">please enter Admin or Client</span><br><br>
+                
+                <button onclick="addData()" class="editors">Add</button>
+            </div>
+            </div>
+            <div id="editPopup" class="popup-container">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('editPopup')">&times;</span>
+                    <h2>Edit Data</h2>
+                    <input type="text" id="UserIdedit" 
+                    class="inputdata" placeholder="ID"><span id="EditErrorId" class="error-message hidden">User not found!</span><br><br>
+
+                    
+                <input type="password" id="newPasswordedit" 
+                class="inputdata" placeholder="Password"><span id="EditErrorPassword" class="error-message hidden">Password is not safe. It must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.</span><br><br>
+
+                <input type="Email" id="newEmailedit"
+                class="inputdata" placeholder="Email"><span id="EditErrorEmail" class="error-message hidden">email is incorrect</span><br><br>
+
+                <input type="text" id="newRoleedit"
+                class="inputdata" placeholder="Role"><span id="EditErrorRole" class="error-message hidden"></span><br><br>
+
+                
+
+                <button onclick="editData()" class="editors">Edit</button>
+                </div>
+            </div>
+            <div id="deletePopup" class="popup-container">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('deletePopup')">&times;</span>
+                    <h2>Delete Data</h2>
+                    <p>please enter id for deletion</p>
+                    <input type="text" id="ID" 
+                    class="inputdata" placeholder="ID"><span id="DeleteErrorId" class="error-message hidden">Id not found </span><br><br>
+                    <button onclick="deleteData()" class="editors">Delete</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div id="editProduct" class="page hidden">
+            <div class="Tablelist">
+                <h2>Products</h2>
+                <table>
+                    <thead>
+                        <tr><th>ProductID</th>
+                            <th>Product name</th>
+                            <th>Duration</th>
+                            
+                            <th>Price</th>
+                            
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="ProductTABLE" >
+                        
+                         
+                    </tbody>
+                    
+                </table>
+                <button id="addButton" class="editors" onclick="openPopup('addPopupProduct')">Add</button>
+<button id="editButton" class="editors" onclick="openPopup('editPopupProduct')">Edit</button>
+<button id="deleteButton" class="editors" onclick="openPopup('deletePopupProduct')">Delete</button>
+        </div>
+        <div id="addPopupProduct" class="popup-container">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('addPopupProduct')">&times;</span>
+                <h2>Add Data</h2>
+                
+
+                <input type="text" id="newProductName"
+                class="inputdata" placeholder="new Product Name"><span id="AddProducterrorError" class="error-message hidden">this productname is unavailable</span><br><br>
+
+                <input type="text" id="newProductDuration"
+                class="inputdata" placeholder="Duration"><span id="AddProductDurationError" class="error-message hidden">unavailable Duration</span><br><br>
+
+                <input type="text" id="newUserID"
+                class="inputdata" placeholder="user-id"><span id="AddUSerIdError" class="error-message hidden">please enter valid user id</span><br><br>
+                
+                <button onclick="addPlan()" class="editors">Add</button>
+            </div>
+            </div>
+            <div id="editPopupProduct" class="popup-container">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('editPopupProduct')">&times;</span>
+                    <h2>Edit Data</h2>
+                    <input type="text" id="ProductIdedit" 
+                    class="inputdata" placeholder="ProductID"><span id="EditErrorProductId" class="error-message hidden">product not found!</span><br><br>
+
+                    
+                <input type="text" id="ProductNameedit" 
+                class="inputdata" placeholder="ProductName"><span id="EditErrorProductname" class="error-message hidden">Please enter correct name</span><br><br>
+
+                <input type="text" id="newProductDurationedit"
+                class="inputdata" placeholder="Duration"><span id="EditErrorDuration" class="error-message hidden">Duration is incorrect</span><br><br>
+
+              
+
+                
+
+                <button onclick="editPlan()" class="editors">Edit</button>
+                </div>
+            </div>
+            <div id="deletePopupProduct" class="popup-container">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('deletePopupProduct')">&times;</span>
+                    <h2>Delete Data</h2>
+                    <p>please enter id for deletion</p>
+                    <input type="text" id="pproductID" 
+                    class="inputdata" placeholder="ProductID"><span id="DeleteErrorProductId" class="error-message hidden">Id not found </span><br><br>
+                    <button onclick="deletePlan()" class="editors">Delete</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="Sign-Out" class=" popup-container  hidden ">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('Sign-Out')">&times;</span>
+                <h2>Sign Out</h2>
+                <p>Are you sure you want to sign out?</p>
+                <button class="editors" onclick="confirmSignOut()">Yes, Sign Out</button>
+                <button class="editors" onclick="closePopup('Sign-Out')">Cancel</button>
+            </div>
+        </main>
+
+
+
+
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <i class="fa-solid fa-bars fa-2xl"></i>
+                </button>
+                
+                <div class="profile">
+                    <div class=" info">
+                        <p>hey, <b>ismail</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div >
+                        <i class="fa-regular fa-user fa-2xl"></i>
+                    </div>
+                </div>
+
+            </div>
+<div class="recent-viewer">
+<h2> Recent visitors</h2>
+<div class="visitors">
+    <div class="visitor">
+        <div >
+            <i class="fa-regular fa-user fa-lg"></i>        </div>
+        <div class="visited">
+            <p>ismail has visited the website</p>
+            <small class="text-muted"> 2 minutes ago</small>
+        </div>
+    </div>
+
+
+    <div class="visitor">
+        <div >
+            <i class="fa-regular fa-user fa-lg"></i>        <div class="visited">
+            <p>youssef has visited the website</p>
+            <small class="text-muted"> 2 minutes ago</small>
+        </div>
+    </div>
+
+
+    <div class="visitor">
+        <div >
+            <i class="fa-regular fa-user fa-lg"></i>        </div>
+        <div class="visited">
+            <p>mohanad has visited the website</p>
+            <small class="text-muted"> 2 minutes ago</small>
+        </div>
+    </div>
+
+    <div class="visitor">
+        <div >
+            <i class="fa-regular fa-user fa-lg"></i>        </div>
+        <div class="visited">
+            <p>zeina has visited the website</p>
+            <small class="text-muted"> 2 minutes ago</small>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+        </div>
+
+        
+
+
+        </div>
+    </div>
+</body>
+<script src="javascript.js"></script>
+
+</html>
